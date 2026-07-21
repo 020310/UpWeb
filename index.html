@@ -1,10 +1,109 @@
+<!--
+======================================================================
+
+UpWeb
+Desenvolvido por Leandro
+
+======================================================================
+
+REGRAS DO PROJETO
+
+1. Sempre dividir o código em partes.
+2. Nunca colocar CSS dentro do HTML.
+3. Nunca colocar JavaScript dentro do HTML.
+4. Cada arquivo deve possuir apenas uma responsabilidade.
+5. Sempre comentar as seções do código.
+6. Facilitar futuras alterações.
+7. Manter o código simples e organizado.
+8. Sempre pensar na expansão do projeto.
+
+======================================================================
+-->
+
 <!DOCTYPE html>
+
 <html lang="pt-BR">
+
 <head>
+
+    <!-- Configurações da Página -->
     <meta charset="UTF-8">
-    <title>RealityG</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Título -->
+    <title>UpWeb</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <h1>Meu site está funcionando!</h1>
+
+    <!-- ==========================================================
+         Borda Animada
+    =========================================================== -->
+
+    <div id="border"></div>
+
+    <!-- ==========================================================
+         Container Principal
+    =========================================================== -->
+
+    <main id="container">
+
+        <!-- ======================================================
+             Logo
+        ======================================================= -->
+
+        <img
+            id="logo"
+            src="img/Logo.png"
+            alt="UpWeb">
+
+        <!-- ======================================================
+             Barra de Pesquisa
+        ======================================================= -->
+
+        <input
+            id="search"
+            type="text"
+            placeholder="Pesquisar..."
+            autocomplete="off"
+            spellcheck="false">
+
+        <!-- ======================================================
+             Área onde o JavaScript trocará o conteúdo
+        ======================================================= -->
+
+        <section id="content">
+
+        </section>
+
+    </main>
+
+    <!-- ==========================================================
+         Scripts
+    =========================================================== -->
+
+    <!-- Script Principal -->
+    <script src="script.js"></script>
+
+    <!-- Sistema de Pesquisa -->
+    <script src="js/pesquisa.js"></script>
+
+    <!-- Futuros Scripts
+
+    <script src="js/router.js"></script>
+
+    <script src="js/pages/itens.js"></script>
+
+    <script src="js/pages/perfil.js"></script>
+
+    <script src="js/pages/titulos.js"></script>
+
+    -->
+
 </body>
+
 </html>
