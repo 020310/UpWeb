@@ -1,1 +1,278 @@
+/*======================================================================
 
+UpWeb
+Desenvolvido por Leandro
+
+=======================================================================
+
+REGRAS
+
+1. Sempre separar o CSS por seções.
+2. Nunca repetir código sem necessidade.
+3. Sempre comentar cada seção.
+4. Pensar na expansão do projeto.
+5. Manter o visual limpo.
+
+======================================================================*/
+
+
+/*======================================================================
+    RESET
+======================================================================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/*======================================================================
+    VARIÁVEIS
+======================================================================*/
+
+:root{
+
+    --background:#202124;
+
+    --search:#303134;
+
+    --search-hover:#3a3b3d;
+
+    --text:#ffffff;
+
+    --placeholder:#b8b8b8;
+
+    --shadow:rgba(0,0,0,.45);
+
+}
+
+
+/*======================================================================
+    BODY
+======================================================================*/
+
+body{
+
+    background:var(--background);
+
+    color:var(--text);
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    width:100vw;
+
+    height:100vh;
+
+    overflow:hidden;
+
+}
+
+
+/*======================================================================
+    BORDA ARCO-ÍRIS
+======================================================================*/
+
+#border{
+
+    position:fixed;
+
+    inset:0;
+
+    padding:2px;
+
+    background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7b00,
+        #ffee00,
+        #00ff00,
+        #00ffff,
+        #0066ff,
+        #7700ff,
+        #ff00d4,
+        #ff0000
+    );
+
+    background-size:400%;
+
+    animation:borderAnimation 8s linear infinite;
+
+    pointer-events:none;
+
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    mask-composite:exclude;
+
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+
+    -webkit-mask-composite:xor;
+
+}
+
+
+/*======================================================================
+    CONTAINER
+======================================================================*/
+
+#container{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:20px;
+
+}
+
+
+/*======================================================================
+    LOGO
+======================================================================*/
+
+#logo{
+
+    width:280px;
+
+    max-width:80%;
+
+    margin-bottom:35px;
+
+    user-select:none;
+
+}
+
+
+/*======================================================================
+    BARRA DE PESQUISA
+======================================================================*/
+
+#search{
+
+    width:680px;
+
+    max-width:92%;
+
+    height:56px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:999px;
+
+    background:var(--search);
+
+    color:var(--text);
+
+    font-size:18px;
+
+    padding-left:28px;
+
+    padding-right:28px;
+
+    transition:.25s;
+
+    box-shadow:0 8px 18px var(--shadow);
+
+}
+
+
+#search:hover{
+
+    background:var(--search-hover);
+
+}
+
+
+#search:focus{
+
+    background:var(--search-hover);
+
+}
+
+
+#search::placeholder{
+
+    color:var(--placeholder);
+
+}
+
+
+/*======================================================================
+    ÁREA DE CONTEÚDO
+======================================================================*/
+
+#content{
+
+    width:100%;
+
+    margin-top:45px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+/*======================================================================
+    RESPONSIVIDADE
+======================================================================*/
+
+@media(max-width:700px){
+
+    #logo{
+
+        width:210px;
+
+        margin-bottom:30px;
+
+    }
+
+    #search{
+
+        width:95%;
+
+        height:52px;
+
+        font-size:17px;
+
+    }
+
+}
+
+
+/*======================================================================
+    ANIMAÇÕES
+======================================================================*/
+
+@keyframes borderAnimation{
+
+    from{
+
+        background-position:0%;
+
+    }
+
+    to{
+
+        background-position:400%;
+
+    }
+
+}
