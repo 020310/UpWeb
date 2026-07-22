@@ -96,7 +96,7 @@ body{
 
     background-size:400%;
 
-    animation:borderAnimation 8s linear infinite;
+    animation:borderAnimation 18s linear infinite;
 
     pointer-events:none;
 
@@ -139,18 +139,35 @@ body{
 
 
 /*======================================================================
+    ÁREA SUPERIOR
+======================================================================*/
+
+#searchArea{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+/*======================================================================
     LOGO
 ======================================================================*/
 
 #logo{
 
-    width:280px;
+    width:310px;
 
-    max-width:80%;
+    max-width:85%;
 
-    margin-bottom:35px;
+    margin-bottom:38px;
 
     user-select:none;
+
+    animation:logoFade .7s;
 
 }
 
@@ -183,7 +200,9 @@ body{
 
     padding-right:28px;
 
-    transition:.25s;
+    transition:.25s ease;
+
+    transform:scale(1);
 
     box-shadow:0 8px 18px var(--shadow);
 
@@ -200,6 +219,10 @@ body{
 #search:focus{
 
     background:var(--search-hover);
+
+    transform:scale(1.02);
+
+    box-shadow:0 12px 28px rgba(0,0,0,.5);
 
 }
 
@@ -219,13 +242,15 @@ body{
 
     width:100%;
 
-    margin-top:45px;
+    min-height:180px;
+
+    margin-top:60px;
 
     display:flex;
 
     flex-direction:column;
 
-    justify-content:center;
+    justify-content:flex-start;
 
     align-items:center;
 
@@ -335,6 +360,26 @@ body{
     to{
 
         background-position:400%;
+
+    }
+
+}
+
+@keyframes logoFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
 
     }
 
