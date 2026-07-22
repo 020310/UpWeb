@@ -306,6 +306,24 @@ body{
     ANIMAÇÕES
 ======================================================================*/
 
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(15px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
 @keyframes borderAnimation{
 
     from{
@@ -317,26 +335,6 @@ body{
     to{
 
         background-position:400%;
-
-    }
-
-}
-
-@keyframes fade{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(15px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:translateY(0);
 
     }
 
